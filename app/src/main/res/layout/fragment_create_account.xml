@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreateAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+
+        <TextView
+            android:id="@+id/createAccountTV"
+            style="@style/BigTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="72dp"
+            android:text="Create your\naccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/numberEmailAddressTV"
+            style="@style/TextAboveETStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Your number &amp; email address"
+            app:layout_constraintStart_toStartOf="@+id/createAccountTV"
+            app:layout_constraintTop_toBottomOf="@+id/createAccountTV" />
+
+        <EditText
+            android:id="@+id/numberEmailAddressET"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16sp"
+            android:autofillHints="Enter number or email"
+            android:background="@drawable/et_with_gradient_stroke"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberEmailAddressTV"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/enterPasswordTV"
+            style="@style/TextAboveETStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Enter your password"
+            app:layout_constraintStart_toStartOf="@+id/numberEmailAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/numberEmailAddressET" />
+
+        <EditText
+            android:id="@+id/enterPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16sp"
+            android:background="@drawable/et_password"
+            app:layout_constraintEnd_toEndOf="@+id/numberEmailAddressET"
+            app:layout_constraintStart_toStartOf="@+id/numberEmailAddressET"
+            app:layout_constraintTop_toBottomOf="@+id/enterPasswordTV" />
+
+        <TextView
+            android:id="@+id/confirmPasswordTV"
+            style="@style/TextAboveETStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Confirm your password"
+            app:layout_constraintStart_toStartOf="@+id/enterPasswordTV"
+            app:layout_constraintTop_toBottomOf="@+id/enterPasswordET" />
+
+        <EditText
+            android:id="@+id/confirmPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16sp"
+            android:background="@drawable/et_password"
+            app:layout_constraintEnd_toEndOf="@+id/enterPasswordET"
+            app:layout_constraintStart_toStartOf="@+id/enterPasswordET"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTV" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/materialCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            app:buttonCompat="@drawable/custom_checkbox"
+            app:buttonTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordET" />
+
+        <TextView
+            android:id="@+id/rememberMeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            style="@style/PaleText"
+            android:text="Remember me"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialCheckBox"
+            app:layout_constraintVertical_bias="0.48" />
+
+        <Button
+            android:id="@+id/logInBttn"
+            style="@style/GradientButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gradient_background_button"
+            android:text="Log in"
+            app:layout_constraintEnd_toEndOf="@+id/confirmPasswordET"
+            app:layout_constraintStart_toStartOf="@+id/confirmPasswordET"
+            app:layout_constraintTop_toBottomOf="@+id/materialCheckBox" />
+
+        <TextView
+            android:id="@+id/leftDividingLineTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/dividing_line"
+            app:layout_constraintBottom_toBottomOf="@+id/orTV"
+            app:layout_constraintEnd_toStartOf="@+id/orTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/orTV" />
+
+        <TextView
+            android:id="@+id/orTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            style="@style/PaleText"
+            android:text="Or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logInBttn" />
+
+        <TextView
+            android:id="@+id/rightDividingLineTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/dividing_line"
+            app:layout_constraintBottom_toBottomOf="@+id/orTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/orTV"
+            app:layout_constraintTop_toTopOf="@+id/orTV" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpWithGoogleBttn"
+            style="@style/GrayButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gray_button_background"
+            android:gravity="center"
+            app:iconSize="27dp"
+            app:iconTint="@null"
+            app:icon="@drawable/ic_google_logo"
+            app:iconGravity="textStart"
+            android:text="Sign up with google"
+            app:layout_constraintEnd_toEndOf="@+id/logInBttn"
+            app:layout_constraintStart_toStartOf="@+id/logInBttn"
+            app:layout_constraintTop_toBottomOf="@+id/orTV" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpWithVKBttn"
+            style="@style/GrayButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gray_button_background"
+            android:gravity="center"
+            app:iconSize="27dp"
+            app:iconTint="@null"
+            app:icon="@drawable/ic_vk_logo"
+            app:iconGravity="textStart"
+            android:text="Sign up with VK"
+            app:layout_constraintEnd_toEndOf="@+id/signUpWithGoogleBttn"
+            app:layout_constraintStart_toStartOf="@+id/signUpWithGoogleBttn"
+            app:layout_constraintTop_toBottomOf="@+id/signUpWithGoogleBttn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

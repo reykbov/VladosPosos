@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OnboardingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/appLogoIV"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="128dp"
+            android:contentDescription="@string/app_logo_text"
+            android:src="@drawable/app_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/bigTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.7"
+            android:text="@string/onboarding_big_text"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appLogoIV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/smallTextTV"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jost_light"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/onboarding_small_text"
+            android:textColor="@color/pale"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bigTextTV">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/getStartedButton"
+            android:layout_width="366dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="55dp"
+            style="@style/GradientButtonStyle"
+            android:background="@drawable/gradient_background_button"
+            android:text="@string/get_started"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bigTextTV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/bigTextTV"
+            app:layout_constraintTop_toBottomOf="@+id/smallTextTV"
+            app:layout_constraintVertical_bias="0.858">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

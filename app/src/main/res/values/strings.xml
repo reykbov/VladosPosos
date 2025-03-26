@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">VladosPosos</string>
+    <string name="onboarding_big_text">Discover your dream job\nand embark on your\njourney today</string>
+    <string name="onboarding_small_text">Start your career journey and unlock new\nopportunities</string>
+    <string name="get_started">Get Started</string>
+    <string name="app_logo_text">App logo</string>
+</resources>

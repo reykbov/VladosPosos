@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#1a0f1d</color>
+    <color name="pale">#AAA7AE</color>
+    <color name="gradient_start_color">#690F88</color>
+    <color name="gradient_end_color">#FF00DB</color>
+    <color name="gradient_center_color">#AE2EBE</color>
+    <color name="et_color">#1b1b1b</color>
+    <color name="et_stroke">#555555</color>
+    <color name="dividing_stroke">#383139</color>
+</resources>
