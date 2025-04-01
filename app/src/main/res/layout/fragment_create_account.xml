@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="92dp"
             android:text="Create your\naccount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,14 +35,16 @@
 
         <EditText
             android:id="@+id/numberEmailAddressET"
+            style="@style/TextInEditText"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginStart="16sp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16sp"
-            android:autofillHints="Enter number or email"
             android:background="@drawable/et_with_gradient_stroke"
+            android:hint="Number or email"
             android:inputType="text"
+            android:paddingStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,17 +61,34 @@
             app:layout_constraintStart_toStartOf="@+id/numberEmailAddressTV"
             app:layout_constraintTop_toBottomOf="@+id/numberEmailAddressET" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enterPasswordET"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="54dp"
             android:layout_marginStart="16sp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16sp"
-            android:background="@drawable/et_password"
+            app:endIconDrawable="@drawable/ic_eye_off"
+            app:endIconMode="password_toggle"
+            android:hint="Enter password"
+            app:hintAnimationEnabled="false"
+            android:textColorHint="@color/et_stroke"
+            app:helperTextTextColor="@color/et_stroke"
+            android:inputType="textPassword"
+            app:boxStrokeColor="@null"
             app:layout_constraintEnd_toEndOf="@+id/numberEmailAddressET"
+            app:layout_constraintHorizontal_bias="0.595"
             app:layout_constraintStart_toStartOf="@+id/numberEmailAddressET"
-            app:layout_constraintTop_toBottomOf="@+id/enterPasswordTV" />
+            app:layout_constraintTop_toBottomOf="@+id/enterPasswordTV">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="20"
+                android:textColor="@color/et_stroke"
+                android:background="@drawable/et_password"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/confirmPasswordTV"
@@ -83,11 +102,15 @@
 
         <EditText
             android:id="@+id/confirmPasswordET"
+            style="@style/TextInEditText"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginStart="16sp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16sp"
+            android:paddingStart="10dp"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
             android:background="@drawable/et_password"
             app:layout_constraintEnd_toEndOf="@+id/enterPasswordET"
             app:layout_constraintStart_toStartOf="@+id/enterPasswordET"
@@ -105,10 +128,10 @@
 
         <TextView
             android:id="@+id/rememberMeTV"
+            style="@style/PaleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            style="@style/PaleText"
             android:text="Remember me"
             app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
             app:layout_constraintStart_toStartOf="parent"
@@ -142,10 +165,10 @@
 
         <TextView
             android:id="@+id/orTV"
+            style="@style/PaleText"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginTop="16dp"
-            style="@style/PaleText"
             android:text="Or"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -173,11 +196,11 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/gray_button_background"
             android:gravity="center"
-            app:iconSize="27dp"
-            app:iconTint="@null"
+            android:text="Sign up with google"
             app:icon="@drawable/ic_google_logo"
             app:iconGravity="textStart"
-            android:text="Sign up with google"
+            app:iconSize="27dp"
+            app:iconTint="@null"
             app:layout_constraintEnd_toEndOf="@+id/logInBttn"
             app:layout_constraintStart_toStartOf="@+id/logInBttn"
             app:layout_constraintTop_toBottomOf="@+id/orTV" />
@@ -192,14 +215,41 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/gray_button_background"
             android:gravity="center"
-            app:iconSize="27dp"
-            app:iconTint="@null"
+            android:text="Sign up with VK"
             app:icon="@drawable/ic_vk_logo"
             app:iconGravity="textStart"
-            android:text="Sign up with VK"
+            app:iconSize="27dp"
+            app:iconTint="@null"
             app:layout_constraintEnd_toEndOf="@+id/signUpWithGoogleBttn"
             app:layout_constraintStart_toStartOf="@+id/signUpWithGoogleBttn"
             app:layout_constraintTop_toBottomOf="@+id/signUpWithGoogleBttn" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/signUpWithVKBttn"
+            app:layout_constraintStart_toStartOf="@+id/signUpWithVKBttn"
+            app:layout_constraintTop_toBottomOf="@+id/signUpWithVKBttn">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/PaleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Already have an account?" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:text="Login" />
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
