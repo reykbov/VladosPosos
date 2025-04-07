@@ -51,4 +51,8 @@
         <item name="android:textColorHint">@color/et_stroke</item>
         <item name="fontFamily">@font/jost_light</item>
     </style>
+
+    <style name="PasswordEditText">
+        <item name="boxBackgroundColor">@color/et_color</item>
+    </style>
 </resources>

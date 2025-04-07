@@ -4,4 +4,18 @@
     <string name="onboarding_small_text">Начните карьерный путь и откройте новые возможности</string>
     <string name="get_started">Начать</string>
     <string name="app_logo_text">Логотип приложения</string>
+    <string name="create_your_naccount">Создайте свой\nаккаунт</string>
+    <string name="your_number_amp_email_address"><![CDATA[Ваш номер & почта]]></string>
+    <string name="number_or_email">Номер или почта</string>
+    <string name="enter_your_password">Введите ваш пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="confirm_your_password">Подтвердите ваш пароль</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="remember_me">Запомнить меня</string>
+    <string name="log_in">Войти</string>
+    <string name="sign_up_with_google">Войти через google</string>
+    <string name="or">Или</string>
+    <string name="sign_up_with_vk">Войти через ВК</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="login_to_your_account">Войдите в свой\nаккаунт</string>
 </resources>

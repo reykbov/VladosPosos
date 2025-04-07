@@ -4,4 +4,22 @@
     <string name="onboarding_small_text">Start your career journey and unlock new\nopportunities</string>
     <string name="get_started">Get Started</string>
     <string name="app_logo_text">App logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="create_your_naccount">Create your\naccount</string>
+    <string name="your_number_amp_email_address"><![CDATA[Your number & email address]]></string>
+    <string name="number_or_email">Number or email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="or">Or</string>
+    <string name="sign_up_with_vk">Sign up with VK</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="login_to_your_account">Login to your\naccount</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_an_account">Create an account</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CreateAccountFragment">
+    tools:context=".fragments.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="92dp"
-            android:text="@string/create_your_naccount"
+            android:text="@string/login_to_your_account"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,46 +93,6 @@
                 android:textColorHint="@color/et_stroke" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/confirmPasswordTV"
-            style="@style/TextAboveETStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/confirm_your_password"
-            app:layout_constraintStart_toStartOf="@+id/enterPasswordTV"
-            app:layout_constraintTop_toBottomOf="@+id/enterPasswordET" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/confirmPasswordET"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginStart="16sp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16sp"
-            app:cursorColor="@color/et_stroke"
-            app:endIconDrawable="@drawable/eye_for_password_selector"
-            app:endIconMode="password_toggle"
-            app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="@+id/enterPasswordET"
-            app:layout_constraintStart_toStartOf="@+id/enterPasswordET"
-            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTV">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/confirmPasswordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/et_password"
-                android:fontFamily="@font/jost_light"
-                android:hint="@string/confirm_password"
-                android:inputType="textPassword"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="0dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/et_stroke" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/materialCheckBox"
             android:layout_width="wrap_content"
@@ -141,7 +101,7 @@
             app:buttonCompat="@drawable/custom_checkbox"
             app:buttonTint="@null"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordET" />
+            app:layout_constraintTop_toBottomOf="@+id/enterPasswordET" />
 
         <TextView
             android:id="@+id/rememberMeTV"
@@ -158,14 +118,12 @@
         <Button
             android:id="@+id/logInBttn"
             style="@style/GradientButtonStyle"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="52dp"
-            android:layout_marginStart="16sp"
-            android:layout_marginEnd="16dp"
             android:background="@drawable/gradient_background_button"
             android:text="@string/log_in"
-            app:layout_constraintEnd_toEndOf="@+id/confirmPasswordET"
-            app:layout_constraintStart_toStartOf="@+id/confirmPasswordET"
+            app:layout_constraintEnd_toEndOf="@+id/enterPasswordET"
+            app:layout_constraintStart_toStartOf="@+id/enterPasswordET"
             app:layout_constraintTop_toBottomOf="@+id/materialCheckBox" />
 
         <TextView
@@ -257,7 +215,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/already_have_an_account" />
+                android:text="@string/don_t_have_an_account" />
 
             <TextView
                 android:id="@+id/gradientLoginTV"
@@ -265,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingStart="4dp"
-                android:text="@string/log_in" />
+                android:text="@string/create_an_account" />
         </LinearLayout>
 
 

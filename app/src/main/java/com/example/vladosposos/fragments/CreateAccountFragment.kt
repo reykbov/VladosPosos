@@ -35,7 +35,7 @@ class CreateAccountFragment : Fragment() {
     }
 
     private fun setGradientText() {
-        val gradientText = binding.textView2
+        val gradientText = binding.gradientLoginTV
         val paint = gradientText.paint
         val width = paint.measureText(gradientText.text.toString())
         gradientText.paint.shader = LinearGradient(
@@ -53,4 +53,7 @@ class CreateAccountFragment : Fragment() {
     private fun getColor(color: Int): Int {
         return ContextCompat.getColor(requireContext(), color)
     }
+
+
+
 }
