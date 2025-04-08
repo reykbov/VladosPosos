@@ -115,6 +115,18 @@
             app:layout_constraintTop_toTopOf="@+id/materialCheckBox"
             app:layout_constraintVertical_bias="0.48" />
 
+        <TextView
+            android:id="@+id/gradientForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_password"
+            android:fontFamily="@font/jost_regular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/rememberMeTV"
+            app:layout_constraintEnd_toEndOf="@+id/enterPasswordET"
+            app:layout_constraintTop_toTopOf="@+id/rememberMeTV" />
+
+
         <Button
             android:id="@+id/logInBttn"
             style="@style/GradientButtonStyle"
@@ -210,7 +222,7 @@
 
 
             <TextView
-                android:id="@+id/alreadyHaveAccTV"
+                android:id="@+id/dontHaveAccTV"
                 style="@style/PaleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -218,13 +230,16 @@
                 android:text="@string/don_t_have_an_account" />
 
             <TextView
-                android:id="@+id/gradientLoginTV"
+                android:id="@+id/gradientCreateAccTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/jost_regular"
+                android:textSize="16sp"
                 android:paddingStart="4dp"
                 android:text="@string/create_an_account" />
         </LinearLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

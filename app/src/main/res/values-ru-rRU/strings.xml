@@ -18,4 +18,7 @@
     <string name="sign_up_with_vk">Войти через ВК</string>
     <string name="already_have_an_account">Уже есть аккаунт?</string>
     <string name="login_to_your_account">Войдите в свой\nаккаунт</string>
+    <string name="don_t_have_an_account">Нет учетной записи?</string>
+    <string name="create_an_account">Создать аккаунт</string>
+    <string name="forget_password">Забыл пароль</string>
 </resources>

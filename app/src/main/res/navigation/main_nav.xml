@@ -21,5 +21,17 @@
         <action
             android:id="@+id/action_createAccountFragment2_to_onboardingFragment2"
             app:destination="@id/onboardingFragment2" />
+        <action
+            android:id="@+id/action_createAccountFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.vladosposos.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment2"
+            app:destination="@id/createAccountFragment2" />
     </fragment>
 </navigation>

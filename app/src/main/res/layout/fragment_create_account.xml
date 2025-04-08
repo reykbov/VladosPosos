@@ -177,8 +177,10 @@
             android:background="@drawable/dividing_line"
             app:layout_constraintBottom_toBottomOf="@+id/orTV"
             app:layout_constraintEnd_toStartOf="@+id/orTV"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/orTV" />
+            app:layout_constraintTop_toTopOf="@+id/orTV"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/orTV"
@@ -262,8 +264,10 @@
             <TextView
                 android:id="@+id/gradientLoginTV"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="23dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/jost_regular"
+                android:textSize="16sp"
                 android:paddingStart="4dp"
                 android:text="@string/log_in" />
         </LinearLayout>

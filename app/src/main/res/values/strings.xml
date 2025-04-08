@@ -22,4 +22,5 @@
     <string name="login_to_your_account">Login to your\naccount</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_an_account">Create an account</string>
+    <string name="forget_password">Forget password</string>
 </resources>

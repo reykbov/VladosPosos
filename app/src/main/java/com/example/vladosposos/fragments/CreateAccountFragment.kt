@@ -27,19 +27,22 @@ class CreateAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         applyClick()
-        setGradientText()
+        setGradientText(binding.gradientLoginTV)
     }
 
     private fun applyClick() {
-        binding.logInBttn.setOnClickListener { findNavController().navigate(R.id.onboardingFragment2) }
+        with(binding) {
+            logInBttn.setOnClickListener { findNavController().navigate(R.id.onboardingFragment2) }
+            gradientLoginTV.setOnClickListener { findNavController().navigate(R.id.loginFragment) }
+        }
+
     }
 
-    private fun setGradientText() {
-        val gradientText = binding.gradientLoginTV
-        val paint = gradientText.paint
-        val width = paint.measureText(gradientText.text.toString())
-        gradientText.paint.shader = LinearGradient(
-            0f, 0f, width, gradientText.textSize,
+    private fun setGradientText(textView: TextView) {
+        val paint = textView.paint
+        val width = paint.measureText(textView.text.toString())
+        textView.paint.shader = LinearGradient(
+            0f, 0f, width, textView.textSize,
                 intArrayOf(
                     getColor(R.color.gradient_start_color),
                     getColor(R.color.gradient_center_color),
@@ -53,7 +56,4 @@ class CreateAccountFragment : Fragment() {
     private fun getColor(color: Int): Int {
         return ContextCompat.getColor(requireContext(), color)
     }
-
-
-
 }
