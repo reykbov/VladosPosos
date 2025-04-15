@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_createAccountFragment2_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment2_to_tiVoshelFragment"
+            app:destination="@id/tiVoshelFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -33,5 +36,14 @@
         <action
             android:id="@+id/action_loginFragment_to_createAccountFragment2"
             app:destination="@id/createAccountFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tiVoshelFragment"
+        android:name="com.example.vladosposos.fragments.TiVoshelFragment"
+        android:label="fragment_ti_voshel"
+        tools:layout="@layout/fragment_ti_voshel" >
+        <action
+            android:id="@+id/action_tiVoshelFragment_to_onboardingFragment2"
+            app:destination="@id/onboardingFragment2" />
     </fragment>
 </navigation>

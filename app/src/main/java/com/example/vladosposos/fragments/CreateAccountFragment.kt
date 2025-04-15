@@ -1,6 +1,5 @@
 package com.example.vladosposos.fragments
 
-import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.os.Bundle
@@ -13,10 +12,13 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.example.vladosposos.R
 import com.example.vladosposos.databinding.FragmentCreateAccountBinding
-import androidx.core.graphics.toColorInt
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.auth.providers.builtin.Email
 
 class CreateAccountFragment : Fragment() {
     private val binding: FragmentCreateAccountBinding by lazy { FragmentCreateAccountBinding.inflate(layoutInflater) }
+    private val supabaseHelper = SupabaseHelper()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,10 +34,9 @@ class CreateAccountFragment : Fragment() {
 
     private fun applyClick() {
         with(binding) {
-            logInBttn.setOnClickListener { findNavController().navigate(R.id.onboardingFragment2) }
             gradientLoginTV.setOnClickListener { findNavController().navigate(R.id.loginFragment) }
+            logInBttn.setOnClickListener {}
         }
-
     }
 
     private fun setGradientText(textView: TextView) {
@@ -56,4 +57,5 @@ class CreateAccountFragment : Fragment() {
     private fun getColor(color: Int): Int {
         return ContextCompat.getColor(requireContext(), color)
     }
+
 }
