@@ -51,7 +51,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("io.github.jan-tennert.supabase:auth-kt:3.1.4")
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:3.1.4")
     implementation("io.ktor:ktor-client-android:3.1.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
 }

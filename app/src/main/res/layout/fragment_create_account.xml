@@ -18,38 +18,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="30dp"
             android:text="@string/create_your_naccount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/numberEmailAddressTV"
+            android:id="@+id/enterEmailAddressTV"
             style="@style/TextAboveETStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="@string/your_number_amp_email_address"
+            android:layout_marginTop="20dp"
+            android:text="@string/enter_your_email"
             app:layout_constraintStart_toStartOf="@+id/createAccountTV"
             app:layout_constraintTop_toBottomOf="@+id/createAccountTV" />
 
         <EditText
-            android:id="@+id/numberEmailAddressET"
+            android:id="@+id/enterEmailET"
             style="@style/TextInEditText"
+            android:autofillHints="emailAddress"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/et_with_gradient_stroke"
-            android:hint="@string/number_or_email"
-            android:inputType="text"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
             android:maxEms="20"
             android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numberEmailAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/enterEmailAddressTV"
             tools:ignore="LabelFor" />
 
         <TextView
@@ -57,37 +59,38 @@
             style="@style/TextAboveETStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
             android:text="@string/enter_your_password"
-            app:layout_constraintStart_toStartOf="@+id/numberEmailAddressTV"
-            app:layout_constraintTop_toBottomOf="@+id/numberEmailAddressET" />
+            app:layout_constraintStart_toStartOf="@+id/enterEmailAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/errorEnterEmailTV" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enterPasswordET"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             app:cursorColor="@color/et_stroke"
             app:endIconDrawable="@drawable/eye_for_password_selector"
             app:endIconMode="password_toggle"
             app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="@+id/numberEmailAddressET"
+            app:layout_constraintEnd_toEndOf="@+id/enterEmailET"
             app:layout_constraintHorizontal_bias="0.595"
-            app:layout_constraintStart_toStartOf="@+id/numberEmailAddressET"
+            app:layout_constraintStart_toStartOf="@+id/enterEmailET"
             app:layout_constraintTop_toBottomOf="@+id/enterPasswordTV">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/enterPasswordEditText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:background="@drawable/et_password"
                 android:fontFamily="@font/jost_light"
                 android:hint="@string/enter_password"
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:maxLines="1"
+                android:minEms="6"
                 android:padding="0dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/et_stroke" />
@@ -98,15 +101,15 @@
             style="@style/TextAboveETStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:text="@string/confirm_your_password"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="@+id/enterPasswordTV"
-            app:layout_constraintTop_toBottomOf="@+id/enterPasswordET" />
+            app:layout_constraintTop_toBottomOf="@+id/errorEnterPasswordTV" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmPasswordET"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16sp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16sp"
@@ -121,7 +124,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmPasswordEditText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:background="@drawable/et_password"
                 android:fontFamily="@font/jost_light"
                 android:hint="@string/confirm_password"
@@ -141,7 +144,7 @@
             app:buttonCompat="@drawable/custom_checkbox"
             app:buttonTint="@null"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordET" />
+            app:layout_constraintTop_toBottomOf="@+id/errorConfirmPasswordTV" />
 
         <TextView
             android:id="@+id/rememberMeTV"
@@ -159,7 +162,7 @@
             android:id="@+id/logInBttn"
             style="@style/GradientButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16sp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/gradient_background_button"
@@ -209,7 +212,7 @@
             android:id="@+id/signUpWithGoogleBttn"
             style="@style/GrayButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -228,9 +231,9 @@
             android:id="@+id/signUpWithVKBttn"
             style="@style/GrayButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/gray_button_background"
             android:gravity="center"
@@ -246,7 +249,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/signUpWithVKBttn"
             app:layout_constraintStart_toStartOf="@+id/signUpWithVKBttn"
@@ -267,10 +270,40 @@
                 android:layout_height="23dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/jost_regular"
-                android:textSize="16sp"
                 android:paddingStart="4dp"
-                android:text="@string/log_in" />
+                android:text="@string/log_in"
+                android:textSize="16sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorEnterEmailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@null"
+            style="@style/ErrorTextView"
+            app:layout_constraintStart_toStartOf="@+id/enterEmailAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/enterEmailET" />
+
+        <TextView
+            android:id="@+id/errorEnterPasswordTV"
+            style="@style/ErrorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@null"
+            app:layout_constraintStart_toStartOf="@+id/enterPasswordTV"
+            app:layout_constraintTop_toBottomOf="@+id/enterPasswordET" />
+
+        <TextView
+            android:id="@+id/errorConfirmPasswordTV"
+            style="@style/ErrorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@null"
+            app:layout_constraintStart_toStartOf="@+id/confirmPasswordTV"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordET" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

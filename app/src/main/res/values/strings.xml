@@ -4,10 +4,9 @@
     <string name="onboarding_small_text">Start your career journey and unlock new\nopportunities</string>
     <string name="get_started">Get Started</string>
     <string name="app_logo_text">App logo</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="create_your_naccount">Create your\naccount</string>
-    <string name="your_number_amp_email_address"><![CDATA[Your number & email address]]></string>
-    <string name="number_or_email">Number or email</string>
+    <string name="enter_your_email">Enter your email address</string>
+    <string name="enter_email">Enter email</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="enter_password">Enter password</string>
     <string name="confirm_your_password">Confirm your password</string>
@@ -18,11 +17,15 @@
     <string name="or">Or</string>
     <string name="sign_up_with_vk">Sign up with VK</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="login_to_your_account">Login to your\naccount</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_an_account">Create an account</string>
-    <string name="forget_password">Forget password</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="the_field_is_required">The field is required</string>
+    <string name="incorrect_email_format">Incorrect email format</string>
+    <string name="email_is_already_registered">Email is already registered</string>
+    <string name="password_must_contain_more_than_5_characters">Password must contain more than 5 characters</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="user_not_found">User not found</string>
+    <string name="invalid_password">Invalid password</string>
 </resources>

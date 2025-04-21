@@ -10,4 +10,5 @@
     <color name="et_color">#1b1b1b</color>
     <color name="et_stroke">#555555</color>
     <color name="dividing_stroke">#383139</color>
+    <color name="red">#f54242</color>
 </resources>
