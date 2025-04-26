@@ -20,21 +20,17 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         var session = supabaseHelper.supabase.auth.currentSessionOrNull()
-        if(!sharedPreferencesHelper.isUserRemembered()) session = null
-        if(session != null) {
-            navController.navigate(R.id.tiVoshelFragment)
-        }
-        else {
-            navController.navigate(R.id.loginFragment)
-        }
-    }
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        if(!sharedPreferences.getBoolean("rememberMe", false)) {
-//            lifecycleScope.launch {
-//                supabaseHelper.userSignOut()
-//            }
-//        }
-//    }
+        if(!sharedPreferencesHelper.isOnboardingChecked()) navController.navigate(R.id.onboardingFragment2)
+        else {
+            if(!sharedPreferencesHelper.isUserRemembered()) session = null
+            if(session != null) {
+                navController.navigate(R.id.tiVoshelFragment)
+            }
+            else {
+                navController.navigate(R.id.loginFragment)
+            }
+        }
+
+    }
 }

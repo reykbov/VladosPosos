@@ -16,4 +16,12 @@ class SharedPreferencesHelper(context: Context) {
     fun isUserRemembered() : Boolean {
         return sharedPreferences.getBoolean("rememberMe", false)
     }
+
+    fun checkOnboarding() {
+        sharedPreferences.edit().putBoolean("onboardingChecked", true).apply()
+    }
+
+    fun isOnboardingChecked() : Boolean {
+        return sharedPreferences.getBoolean("onboardingChecked", false)
+    }
 }
