@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.vladosposos.R
-import com.example.vladosposos.SharedPreferencesHelper
+import com.example.vladosposos.helpers.SharedPreferencesHelper
 import com.example.vladosposos.databinding.FragmentOnboardingBinding
 
 class OnboardingFragment : Fragment() {
@@ -30,7 +30,7 @@ class OnboardingFragment : Fragment() {
     private fun applyClick() {
         binding.getStartedButton.setOnClickListener {
             sharedPreferencesHelper.checkOnboarding()
-            findNavController().navigate(R.id.createAccountFragment2)
+            findNavController().navigate(R.id.action_onboardingFragment_to_createAccountFragment)
         }
     }
 }

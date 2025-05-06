@@ -3,30 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/onboardingFragment2">
+    app:startDestination="@id/onboardingFragment">
     <fragment
-        android:id="@+id/onboardingFragment2"
+        android:id="@+id/onboardingFragment"
         android:name="com.example.vladosposos.fragments.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" >
         <action
-            android:id="@+id/action_onboardingFragment2_to_createAccountFragment2"
-            app:destination="@id/createAccountFragment2" />
+            android:id="@+id/action_onboardingFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
     </fragment>
     <fragment
-        android:id="@+id/createAccountFragment2"
+        android:id="@+id/createAccountFragment"
         android:name="com.example.vladosposos.fragments.CreateAccountFragment"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" >
         <action
-            android:id="@+id/action_createAccountFragment2_to_onboardingFragment2"
-            app:destination="@id/onboardingFragment2" />
-        <action
-            android:id="@+id/action_createAccountFragment2_to_loginFragment"
+            android:id="@+id/action_createAccountFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_createAccountFragment2_to_tiVoshelFragment"
-            app:destination="@id/tiVoshelFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -34,8 +28,13 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_createAccountFragment2"
-            app:destination="@id/createAccountFragment2" />
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_tiVoshelFragment"
+            app:destination="@id/tiVoshelFragment"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/tiVoshelFragment"
@@ -43,7 +42,7 @@
         android:label="fragment_ti_voshel"
         tools:layout="@layout/fragment_ti_voshel" >
         <action
-            android:id="@+id/action_tiVoshelFragment_to_onboardingFragment2"
-            app:destination="@id/onboardingFragment2" />
+            android:id="@+id/action_tiVoshelFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

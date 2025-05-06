@@ -1,4 +1,4 @@
-package com.example.vladosposos
+package com.example.vladosposos.helpers
 
 import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.auth.auth
@@ -14,7 +14,7 @@ class SupabaseHelper {
         install(Auth)
         install(Postgrest)
     }
-    val adminAuthClient = supabase.auth.admin
+    private val adminAuthClient = supabase.auth.admin
 
     suspend fun signUpWithEmail(mail: String, pass: String) {
         val user = supabase.auth.signUpWith(provider = Email) {

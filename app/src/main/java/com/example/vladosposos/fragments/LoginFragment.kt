@@ -12,8 +12,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.vladosposos.R
-import com.example.vladosposos.SharedPreferencesHelper
-import com.example.vladosposos.SupabaseHelper
+import com.example.vladosposos.helpers.SharedPreferencesHelper
+import com.example.vladosposos.helpers.SupabaseHelper
 import com.example.vladosposos.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch
 
@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
 
     private fun applyClick() {
         with(binding) {
-            gradientCreateAccTV.setOnClickListener { findNavController().navigate(R.id.createAccountFragment2) }
+            gradientCreateAccTV.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_createAccountFragment) }
             logInBttn.setOnClickListener {
                 viewLifecycleOwner.lifecycleScope.launch {
                     launchCoroutine(enterEmailET.text.toString(), enterPasswordEditText.text.toString())
@@ -84,7 +84,7 @@ class LoginFragment : Fragment() {
                                 supabaseHelper.signInWithEmail(userEmail, userPassword)
                                 if(materialCheckBox.isChecked) sharedPreferencesHelper.rememberMe()
                                 else sharedPreferencesHelper.notRememberMe()
-                                findNavController().navigate(R.id.tiVoshelFragment)
+                                findNavController().navigate(R.id.action_loginFragment_to_tiVoshelFragment)
                             }
                             catch (e: Exception) {
                                 errorEnterPasswordTV.text = getString(R.string.invalid_password)

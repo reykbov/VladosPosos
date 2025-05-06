@@ -12,8 +12,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.vladosposos.R
-import com.example.vladosposos.SharedPreferencesHelper
-import com.example.vladosposos.SupabaseHelper
+import com.example.vladosposos.helpers.SharedPreferencesHelper
+import com.example.vladosposos.helpers.SupabaseHelper
 import com.example.vladosposos.databinding.FragmentCreateAccountBinding
 import kotlinx.coroutines.launch
 
@@ -93,9 +93,7 @@ class CreateAccountFragment : Fragment() {
                         }
                         if(flag1 && flag2) {
                             supabaseHelper.signUpWithEmail(userEmail, userPassword)
-                            if(materialCheckBox.isChecked) sharedPreferencesHelper.rememberMe()
-                            else sharedPreferencesHelper.notRememberMe()
-                            findNavController().navigate(R.id.tiVoshelFragment)
+                            findNavController().navigate(R.id.action_createAccountFragment_to_loginFragment)
                         }
                     }
                 }

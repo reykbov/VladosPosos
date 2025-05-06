@@ -1,16 +1,17 @@
-package com.example.vladosposos
+package com.example.vladosposos.helpers
 
 import android.content.Context
+import androidx.core.content.edit
 
 class SharedPreferencesHelper(context: Context) {
-    val sharedPreferences = context.getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+    private val sharedPreferences = context.getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
 
     fun rememberMe() {
-        sharedPreferences.edit().putBoolean("rememberMe", true).apply()
+        sharedPreferences.edit() { putBoolean("rememberMe", true) }
     }
 
     fun notRememberMe() {
-        sharedPreferences.edit().putBoolean("rememberMe", false).apply()
+        sharedPreferences.edit() { putBoolean("rememberMe", false) }
     }
 
     fun isUserRemembered() : Boolean {
@@ -18,7 +19,7 @@ class SharedPreferencesHelper(context: Context) {
     }
 
     fun checkOnboarding() {
-        sharedPreferences.edit().putBoolean("onboardingChecked", true).apply()
+        sharedPreferences.edit() { putBoolean("onboardingChecked", true) }
     }
 
     fun isOnboardingChecked() : Boolean {

@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.example.vladosposos.databinding.ActivityMainBinding
+import com.example.vladosposos.helpers.SharedPreferencesHelper
+import com.example.vladosposos.helpers.SupabaseHelper
 import io.github.jan.supabase.auth.auth
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         var session = supabaseHelper.supabase.auth.currentSessionOrNull()
 
-        if(!sharedPreferencesHelper.isOnboardingChecked()) navController.navigate(R.id.onboardingFragment2)
+        if(!sharedPreferencesHelper.isOnboardingChecked()) navController.navigate(R.id.onboardingFragment)
         else {
             if(!sharedPreferencesHelper.isUserRemembered()) session = null
             if(session != null) {

@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.vladosposos.R
-import com.example.vladosposos.SharedPreferencesHelper
-import com.example.vladosposos.SupabaseHelper
+import com.example.vladosposos.helpers.SharedPreferencesHelper
+import com.example.vladosposos.helpers.SupabaseHelper
 import com.example.vladosposos.databinding.FragmentTiVoshelBinding
 import kotlinx.coroutines.launch
 
@@ -45,7 +45,7 @@ class TiVoshelFragment : Fragment() {
     private suspend fun launchCoroutine() {
         supabaseHelper.userSignOut()
         sharedPreferencesHelper.notRememberMe()
-        findNavController().navigate(R.id.loginFragment)
+        findNavController().navigate(R.id.action_tiVoshelFragment_to_loginFragment)
     }
 
 }
